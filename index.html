@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Halaman Simple</title>
+  <style>
+    :root{--accent:#6C5CE7;--bg:#f7f7fb;--card:#ffffff;--muted:#6b6b83}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#222}
+    .container{max-width:980px;margin:32px auto;padding:0 18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;background:linear-gradient(135deg,var(--accent),#a29bfe);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted)}
+    .hero{background:linear-gradient(180deg, rgba(108,92,231,0.06), transparent);padding:28px;border-radius:12px;display:flex;gap:20px;align-items:center}
+    .hero .left{flex:1}
+    h1{font-size:24px;margin:0 0 8px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{margin-top:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(20,20,50,0.04)}
+    footer{margin:28px 0;text-align:center;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:560px){h1{font-size:20px}.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">H</div>
+        <div>
+          <div style="font-weight:700">Halaman Simple</div>
+          <div style="font-size:12px;color:var(--muted)">Contoh template HTML single-file</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="left">
+        <h1>Halo! Ini halaman web sederhana.</h1>
+        <p class="lead">Template ini cocok untuk portfolio, landing page kecil, atau latihan HTML/CSS. Mudah dikustomisasi.</p>
+        <div class="cta">
+          <button class="btn" onclick="showWelcome()">Klik aku</button>
+        </div>
+      </div>
+      <div class="right">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'><rect rx='12' width='160' height='120' fill='%236C5CE7'/><text x='50%' y='50%' font-size='20' fill='white' text-anchor='middle' dominant-baseline='middle'>Image</text></svg>" alt="illustration" style="border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
+      </div>
+    </section>
+
+    <section id="features" style="margin-top:20px">
+      <div class="cards">
+        <div class="card">
+          <h3 style="margin-top:0">Responsive</h3>
+          <p style="margin:6px 0;color:var(--muted)">Tampil rapi di layar kecil dan besar tanpa framework.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Single file</h3>
+          <p style="margin:6px 0;color:var(--muted)">HTML + CSS + sedikit JS — cukup satu file untuk mulai.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Mudah edit</h3>
+          <p style="margin:6px 0;color:var(--muted)">Ganti teks, warna, atau gambar sekejap untuk disesuaikan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin-top:0">Cara pakai singkat</h3>
+        <ol style="color:var(--muted)">
+          <li>Buka file ini di editor (VS Code, Notepad++).</li>
+          <li>Edit teks di &lt;h1&gt; dan paragraf.</li>
+          <li>Ganti gambar dengan URL atau file lokal.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h3 style="margin-top:0">Kontak</h3>
+        <p style="color:var(--muted);margin:6px 0">Mau dimodif jadi portfolio atau ditambahkan form? Kasi tau aku.</p>
+      </div>
+    </section>
+
+    <footer>
+      Dibuat dengan ❤️ — buka file "Halaman Simple - index.html" untuk kodenya.
+    </footer>
+  </div>
+
+  <script>
+    function showWelcome(){
+      alert('Halo Him! Ini contoh halaman sederhana. Mau tambah bagian apa?')
+    }
+  </script>
+</body>
+</html>
